@@ -1,0 +1,47 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+	<div class="roof">
+		<img class="img-responsive" src="/static/roof.png" alt="roof">
+		<img class="img-responsive divider" src="/static/divider.png" alt="divider">
+	</div>	
+    <div class="container">
+    	<div class="col-md-12 aligncenter">
+		    <h1>List of Restaurants</h1>
+	        
+	    <a class="btn btn-warning" href = '{{url_for('restaurantNew')}}'>Create a New Restaurant</a>
+		<div class = 'flash'>
+				      {% with messages = get_flashed_messages() %}
+		      {% if messages %}
+		          
+		        <ul>
+		        {% for message in messages %}
+		            <li> <strong> {{ message }} </strong> </li>
+		        {% endfor %}
+		        </ul>
+		        {% endif %}
+		    {% endwith %}
+		</div>
+
+		{% for i in restaurant %}
+	    <div>
+	    	<div class="restname">
+	    	<a href = '{{url_for('restaurantMenu', restaurant_id = i.id) }}'>{{i.name}}</a>
+			</div>
+			<div class = "editdeleterest">
+				<a class="edit" href="{{url_for('restaurantEdit', restaurant_id = i.id) }}" >EDIT</a>
+				<a class="delete" href="{{ url_for('restaurantDelete',restaurant_id = i.id)}}">DELETE</a>
+				<img class="img-responsive divider" src="/static/restdivider.png" alt="divider">
+			</div>
+	    </div>
+		{% endfor %}
+		</div>
+    </div>
+</body>
+</html>

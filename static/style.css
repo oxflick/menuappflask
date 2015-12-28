@@ -1,0 +1,91 @@
+body { 
+	background-color: #fff6d2;
+	font-family: 'Slabo 27px', serif;
+}
+h1, h2, h3, h4 { 
+	color: #d88164;
+}
+h1, h2 { 
+	font-family: 'Abril Fatface', cursive;
+}
+h2 { 
+	font-size: 1.2em;
+}
+
+p, dd, dt { 
+	color: #7d89aa;
+}
+
+a {
+    text-decoration: none;
+    color:#FFFFCC;
+    font-size: .75em;
+}
+
+.roof img {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.editdeleterest .divider {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.roof .divider {
+	margin-bottom: -20px;
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+.restname a {
+    display: inline-block;
+    color: #cc5636;
+    font-size: 1.4em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.name { 
+	width: 50%;
+	display: inline-block; 
+	color: #cc5636;
+    font-size: 1.4em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.nameandprice .description {
+	width: 300px;
+	display: block;
+}
+
+.description {
+	margin: 0 auto;
+}
+
+
+.edit {
+	color: green;
+}
+
+.delete {
+	color: red;
+}
+
+ul {
+	list-style-type: none;
+	color: red;
+
+}
+
+li {
+	font-weight: bold;
+	font-size: 1.4em;
+	margin-left: -28px;
+
+}
